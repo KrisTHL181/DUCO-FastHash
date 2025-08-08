@@ -1,0 +1,24 @@
+[package]
+name = "ducohasher"
+version = "0.1.1"
+edition = "2021"
+
+[lib]
+name = "ducohasher"
+crate-type = ["cdylib"]
+
+[dependencies]
+itoa = "1.0.11"
+pyo3 = { git = "https://github.com/pyo3/pyo3", features = ["abi3-py37"] }
+#sha1_smol = "1.0.1"
+sha1 = { version = "0.10", features = ["asm"] }
+
+# [profile.release]
+# opt-level = 3
+# lto = "fat"
+# debug = false
+# codegen-units = 1
+# panic = "abort"
+# incremental = false
+# overflow-checks = false
+# strip = true
